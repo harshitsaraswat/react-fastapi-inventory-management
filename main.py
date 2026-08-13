@@ -7,11 +7,10 @@ from fastapi import HTTPException
 from security import hash_password, verify_password, create_access_token
 
 app = FastAPI()
-
 origins = [
     "http://localhost:3000",
+    "https://YOUR-FRONTEND-URL.onrender.com",
 ]
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
