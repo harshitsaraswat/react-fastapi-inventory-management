@@ -1,18 +1,20 @@
+import os
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import database_models
+from dotenv import load_dotenv
 
-DATABASE_URL = "mysql+mysqlconnector://root:Saraswat%40123@localhost:3306/mydb"
+load_dotenv()
 
-engine = create_engine(DATABASE_URL)
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+engine = create_engine(
+    DATABASE_URL,
+    pool_pre_ping=True
+)
 
 SessionLocal = sessionmaker(
     autocommit=False,
     autoflush=False,
     bind=engine
 )
-
-db = SessionLocal()
-
-# Use the database
-db.close()
