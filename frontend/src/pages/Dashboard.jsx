@@ -5,7 +5,7 @@ import TaglineSection from "../TaglineSection";
 const firstname = localStorage.getItem("firstname");
 
 const api = axios.create({
-  baseURL: "http://localhost:8000",
+   baseURL: "https://harshit-inventory-api-2026.onrender.com",
 });
 <h2>Hi, {firstname} 👋</h2>
 

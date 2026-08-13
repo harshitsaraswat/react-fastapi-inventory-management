@@ -26,7 +26,7 @@ function Register() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/register",
+        "https://harshit-inventory-api-2026.onrender.com/register",
         form
       );
 
