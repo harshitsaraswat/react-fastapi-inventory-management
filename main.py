@@ -9,7 +9,7 @@ from security import hash_password, verify_password, create_access_token
 app = FastAPI()
 origins = [
     "http://localhost:3000",
-    "https://YOUR-FRONTEND-URL.onrender.com",
+    "https://harshit-inventory-frontend.onrender.com",
 ]
 app.add_middleware(
     CORSMiddleware,
